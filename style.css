@@ -1,0 +1,10 @@
+html {
+background-color:aliceblue
+}
+
+.navbar {
+    background-color:midnightblue;
+    color: azure;
+    display: flex;
+    justify-content: center;
+}
