@@ -1,10 +1,25 @@
 html {
-background-color:aliceblue
+    background-color: aliceblue
 }
 
 .navbar {
-    background-color:midnightblue;
+    background-color: midnightblue;
     color: azure;
     display: flex;
     justify-content: center;
+}
+
+.topnav {
+    background-color: rgb(73, 160, 226);
+    display: inline-flex;
+    font-weight: 600;
+}
+
+.topnav a {
+    color: aliceblue;
+    display: flex;
+    font-size: large;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-decoration: none;
 }
