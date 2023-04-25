@@ -7,4 +7,6 @@ function handleCitySearch(event){
 //build a url by combining baseUrl + input value + api key    
 };
 
+
+
 searchBtn.addEventListener('click', handleCitySearch);
