@@ -11,6 +11,20 @@ function getWeatherResults(lat, lon) {
         })
         .then(function (data) {
             console.log(data);
+            var card = $("<div>").addClass("card").attr("style","width:20vw");
+            var cardTitle = $("<h3>").addClass("card-title").text(data.name);
+            var cardBody = $("<div>").addClass("card-body");
+            var tempEl = $("<p>").addClass("card-text").text("TEMP: " + data.main.temp.toFixed(0)+ "F")
+            $(".weather").append(card.append(cardTitle, cardBody, tempEl))
+        //     <div class="row row-cols-1 row-cols-md-3 g-4">
+        // <div class="col">
+        //   <div class="card h-100">
+        //     <div class="card-body">
+        //       <h5 class="card-title">Card title</h5>
+        //       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        //     </div>
+        //   </div>
+        // </div>
         })
 }
 
