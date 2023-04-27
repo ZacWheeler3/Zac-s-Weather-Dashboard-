@@ -16,8 +16,12 @@ function getWeatherResults(lat, lon) {
             var card = $("<div>").addClass("card").attr("style", "width:20vw");
             var cardTitle = $("<h3>").addClass("card-title").text(data.name);
             var cardBody = $("<div>").addClass("card-body");
-            var tempEl = $("<p>").addClass("card-text").text("TEMP: " + data.main.temp.toFixed(0) + "F")
-            $(".weather").append(card.append(cardTitle, cardBody, tempEl))
+            var iconCode = $("<img>").addClass("card-text").attr("src","https://openweathermap.org/img/wn/" + data.weather[0].icon + ".png").attr("alt", "weather icon").attr("style", "width:100px","height: 100px");
+            var tempEl = $("<p>").addClass("card-text").text("TEMP: " + data.main.temp.toFixed(0) + "F");
+            var windEl = $("<p>").addClass("card-text").text("Windspeed " + data.wind.speed + ( "mph"));
+            var humidityEl = $("<p>").addClass("card-text").text("Humidity " + data.main.humidity + ( "%"));
+
+            $(".weather").append(card.append(cardTitle, iconCode, cardBody, tempEl, windEl, humidityEl))
             //     <div class="row row-cols-1 row-cols-md-3 g-4">
             // <div class="col">
             //   <div class="card h-100">
@@ -31,8 +35,8 @@ function getWeatherResults(lat, lon) {
 }
 
 function handleCitySearch(event) {
+    event.preventDefault();
     var cityName = $(this).siblings(".city-value").val().trim();
-    console.log(cityName);
     var requestUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=cf07720502e46b7205f0e6b5ce3e8393`;
     fetch(requestUrl)
         .then(function (response) {
@@ -40,10 +44,11 @@ function handleCitySearch(event) {
         })
         .then(function (data) {
             console.log(data);
+            var lat = data[0].lat;
+            var lon = data[0].lon;
+            $(".weather").empty();
+            getWeatherResults(lat, lon);
         })
-    var lat = data[0].lat;
-    var lon = data[0].lon;
-    getWeatherResults(lat, lon);
 
 
     //get value of input field
