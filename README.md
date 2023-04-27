@@ -1,16 +1,17 @@
-# 06 Third-Party APIs: Work Day Scheduler
-dont forget to change title
+# 06 Server-Side APIs: Weather Dashboard
+
 ## Description 
 ```
+Create a working 5 day weather app that allows the user to input any city and get a live weather update.
 
 ```
 ## Usage
 ```
-Github Repo:
+Github Repo: https://github.com/ZacWheeler3/Zac-s-Weather-Dashboard-
 
 Live Site: 
 
-
+Create a simple weather application that allows a user to search any city and get the local weather for that city live. This app will run in the browser and feature dynamically updated HTML and bootstrap CSS powered by jQuery .
 
 ```
 
@@ -35,3 +36,4 @@ THEN I am presented with a 5-day forecast that displays the date, an icon repres
 WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city
 ```
+![Calender](https://cdn.discordapp.com/attachments/1085659301005250651/1101288538269556736/image.png)
