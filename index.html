@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <nav class="navbar">
         <h1>Weather Dashboard</h1>
@@ -14,10 +16,12 @@
     <div class="container">
         <h2>Search for a City:</h2>
         <div class="topnav">
-            <a class="active" href="#home">Search </a>
-            <input type="text" placeholder="Enter a city name.">
+            <button id = "search-button" class="active" href="#home">Search </button>
+            <input type="text" class= "city-value" placeholder="Enter a city name.">
         </div>
     </div>
-    <script src="scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
 </body>
+
 </html>
