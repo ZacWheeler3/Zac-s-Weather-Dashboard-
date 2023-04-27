@@ -1,3 +1,19 @@
+# 06 Third-Party APIs: Work Day Scheduler
+dont forget to change title
+## Description 
+```
+
+```
+## Usage
+```
+Github Repo:
+
+Live Site: 
+
+
+
+```
+
 ## User Story
 
 ```
